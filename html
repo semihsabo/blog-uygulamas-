@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Uygulaması</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Blog Uygulaması</h1>
+
+    <form id="blogForm" class="card form-card">
+      <input type="text" id="title" placeholder="🖊 Başlık" required />
+      <select id="category" required>
+        <option value="">📂 Kategori Seç</option>
+        <option value="Teknoloji">Teknoloji</option>
+        <option value="Yaşam">Yaşam</option>
+        <option value="Seyahat">Seyahat</option>
+      </select>
+      <div id="content" contenteditable="true" class="editable" placeholder="İçerik giriniz..."></div>
+      <button type="submit">➕ Yayınla</button>
+    </form>
+
+    <div class="filter-area card">
+      <input type="text" id="search" placeholder="🔍 Başlıkta ara..." />
+      <select id="filterCategory">
+        <option value="">🔄 Tüm Kategoriler</option>
+        <option value="Teknoloji">Teknoloji</option>
+        <option value="Yaşam">Yaşam</option>
+        <option value="Seyahat">Seyahat</option>
+      </select>
+    </div>
+
+    <div id="postsContainer" class="posts"></div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDate"></p>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
